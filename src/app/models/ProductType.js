@@ -9,9 +9,9 @@ const ObjectId = Schema.ObjectId;
 
 ProductTypeSchema = new mongoose.Schema({
   author: ObjectId,
-  title: String,
+  name: String,
   amount: Number,
-  slug: { type: String, slug: 'title', unique: true },
+  slug: { type: String, slug: 'name', unique: true },
 });
 
 module.exports = mongoose.model('ProductType', ProductTypeSchema);
